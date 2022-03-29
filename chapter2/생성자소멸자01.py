@@ -6,3 +6,7 @@ class MyClass:
     def __del__(self):
         print("Instance is deleted!")
 
+my = MyClass(5)
+
+print("전체 코드 종료")
+"전체 코드 종료 후에 __del__수행됨."
