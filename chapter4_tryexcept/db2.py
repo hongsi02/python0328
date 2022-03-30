@@ -1,7 +1,7 @@
 import sqlite3
 
-#전역함수로 연결객체 리턴(메모리 작업)
-con = sqlite3.connect(":memory:")
+#전역함수로 연결객체 리턴(파일에 영구적으로 저장)
+con = sqlite3.connect("/Users/hongsi/Documents/Python_Work/PythonEdu/chapter4_tryexcept/sample.db")
 #두번째 인스턴스인 커서를 리턴받기
 cur = con.cursor()
 #테이블을 가장 먼저 생성
@@ -20,5 +20,7 @@ cur.executemany("insert into PhoneBook values (?, ?);", datalist)
 
 #검색하기
 cur.execute("select * from PhoneBook;")
-for row in cur:
-    print(row)
+print(cur.fetchall())
+
+#작업완료(정상적으로 작업완료)
+con.commit()
