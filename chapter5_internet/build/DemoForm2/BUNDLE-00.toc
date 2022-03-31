@@ -1,0 +1,3 @@
+([('DemoForm2',
+   '/Users/hongsi/Documents/Python_Work/PythonEdu/chapter5_internet/dist/DemoForm2',
+   'EXECUTABLE')],)

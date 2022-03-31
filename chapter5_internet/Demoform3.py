@@ -19,7 +19,7 @@ class DemoForm(QMainWindow, form_class):
         self.label.setText("첫번째 Qt데모")
     #슬롯메서드정의
     def firstClick(self):
-        f = open("c:\\work\\webtoon.txt", "a+", encoding="utf-8")
+        f = open("./chapter5_internet/webtoon.txt", "a+", encoding="utf-8")
         data = urllib.request.urlopen('http://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=fri')
         soup = BeautifulSoup(data, 'html.parser')
         cartoons = soup.find_all('td', class_='title')

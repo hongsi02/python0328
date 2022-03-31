@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic 
 
 #디자인 파일을 로딩
-form_class = uic.loadUiType("./chapter5_internet/DemoForm2.ui")[0]
+form_class = uic.loadUiType("DemoForm2.ui")[0]
 
 #클래스 정의(QMainWindow클래스 상속):다중상속은 C++, Python정도만 허용 
 class DemoForm(QMainWindow, form_class):
